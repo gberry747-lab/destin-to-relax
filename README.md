@@ -1,6 +1,6 @@
 # Destin To Relax - destintorelax.com
 
-Direct marketing site for **Destin To Relax**, a 7-bedroom lakefront vacation estate in the gated Destiny East community, Destin, FL. Sleeps 16. All booking CTAs link to the RealJoy Vacations listing.
+Direct marketing site for **Destin To Relax**, a 7-bedroom lakefront vacation estate in the gated Destiny East community, Destin, FL. Sleeps 14. All booking CTAs link to the RealJoy Vacations listing.
 
 - Live: https://destintorelax.com (GitHub Pages, custom domain)
 - Fallback: https://gberry747-lab.github.io/destin-to-relax/
@@ -21,7 +21,7 @@ Append `?static=1` to the URL to disable animations and reveal all content (used
 
 ## House facts (keep consistent)
 
-- 7 bedrooms, 5.5 baths, sleeps 16 (pullout upgrade to 18 planned)
+- 7 bedrooms, 5.5 baths, sleeps 14 in real beds (3 kings, 3 queens, 2 twins); max occupancy 18 once TWO pullout couches are added - update sitewide when they're in
 - NO pets (site policy - RealJoy listing incorrectly says pets allowed as of Aug 2026)
 - Guests must be 25+ to book
 - Private heated pool (seasonal fee) + spa, private elevator, two kitchens
