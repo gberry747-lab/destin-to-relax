@@ -111,7 +111,8 @@ h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,36,51,0.42) 0%, rgba(13,36,51,0.12) 40%, rgba(13,36,51,0.55) 100%); }
 .hero-inner { position: relative; z-index: 2; max-width: 900px; padding: 7rem 1.4rem 5rem; }
 .hero-kicker { text-transform: uppercase; letter-spacing: 0.34em; font-size: 0.78rem; font-weight: 600; opacity: 0.95; margin-bottom: 1.3rem; }
-.hero-title { font-size: clamp(2.2rem, 7vw, 5.2rem); font-weight: 500; text-shadow: 0 4px 30px rgba(0,0,0,0.35); text-wrap: balance; max-width: 16ch; margin: 0 auto; }
+.hero-title { font-size: clamp(2.2rem, 6vw, 4.6rem); font-weight: 500; text-shadow: 0 4px 30px rgba(0,0,0,0.35); margin: 0 auto; }
+.hero-title span { display: inline-block; text-wrap: balance; }
 .hero-sub { max-width: 620px; margin: 1.5rem auto 0; font-size: clamp(1rem, 1.6vw, 1.18rem); opacity: 0.96; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
 .hero-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-top: 1.8rem; }
 .hero-chips span {
