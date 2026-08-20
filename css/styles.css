@@ -299,6 +299,8 @@ h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .fun-body ul { list-style: none; }
 .fun-body li { padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 0.93rem; color: var(--ink-soft); }
 .fun-body li::before { content: ""; position: absolute; left: 0; top: 0.95rem; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+.fun-body a { color: var(--teal-deep); font-weight: 600; text-decoration: underline; text-decoration-color: rgba(21,127,132,0.35); text-underline-offset: 3px; transition: color 0.2s ease, text-decoration-color 0.2s ease; }
+.fun-body a:hover { color: var(--coral-deep); text-decoration-color: currentColor; }
 @media (max-width: 900px) { .fun-grid { grid-template-columns: 1fr; } }
 
 /* ---------- seasonal events ---------- */
