@@ -294,8 +294,8 @@
     ];
     /* each layer scales through its window; upper layers fade in on top.
        Long, eased crossfades so each photo dissolves in rather than cutting. */
-    const win = [ [0, 0.55], [0.28, 0.86], [0.58, 1] ];
-    const fadeIn = [null, [0.26, 0.54], [0.56, 0.84]];
+    const win = [ [0, 0.52], [0.3, 0.84], [0.6, 1] ];
+    const fadeIn = [null, [0.28, 0.48], [0.58, 0.78]];
     const clamp01 = (v) => Math.min(1, Math.max(0, v));
     const ease = (t) => t * t * (3 - 2 * t); /* smoothstep */
 
@@ -326,7 +326,7 @@
         if (death[i]) blur += 2.5 * ease(clamp01((p - death[i][0]) / (death[i][1] - death[i][0])));
         l.style.filter = blur > 0.05 ? "blur(" + blur.toFixed(2) + "px)" : "none";
       });
-      setLine(p < 0.4 ? 0 : p < 0.7 ? 1 : 2);
+      setLine(p < 0.38 ? 0 : p < 0.68 ? 1 : 2);
     }
 
     let ticking = false;

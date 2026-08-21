@@ -173,7 +173,7 @@ h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .hero.ripple-on .hero-media img { opacity: 0; animation: none; }
 
 /* drone descent (FX - toggle in main.js) */
-.descent { display: none; height: 320vh; position: relative; background: var(--ink); }
+.descent { display: none; height: 290vh; position: relative; background: var(--ink); }
 .descent-on .descent { display: block; }
 .descent-scene { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
 .d-layer { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; will-change: transform, opacity, filter; }
