@@ -300,7 +300,7 @@ h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .band-cta {
   background-image: linear-gradient(rgba(13,36,51,0.24), rgba(13,36,51,0.24)), url('../images/full/75.jpg');
   background-attachment: scroll; /* fixed attachment sizes to the viewport and crops the photo */
-  aspect-ratio: 2800 / 1547;     /* full width; bottom ~320px trimmed to hide the power poles */
+  aspect-ratio: 2800 / 1707;     /* full width; bottom ~160px trimmed - hides pole bases, keeps the cul-de-sac */
   background-position: top center;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 2rem 1.4rem;
