@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,6 +70,20 @@
 </header>
 
 <!-- ======== HERO ======== -->
+<!-- ======== DRONE DESCENT (FX - toggle in main.js) ======== -->
+<div class="descent" id="descent" aria-hidden="true">
+  <div class="descent-scene">
+    <div class="d-layer" data-origin="34% 66%" style="background-image:url('images/full/75.jpg')"></div>
+    <div class="d-layer" data-origin="55% 58%" style="background-image:url('images/full/74.jpg')"></div>
+    <div class="d-layer" data-origin="50% 62%" style="background-image:url('images/full/17.jpg')"></div>
+    <div class="d-cap" id="dCap">
+      <span class="d-kicker">Destiny East &middot; Destin, Florida</span>
+      <p id="dLine">See that pin? Gulf, lake - and your house.</p>
+      <div class="d-hint">Scroll to descend &darr;</div>
+    </div>
+  </div>
+</div>
+
 <section class="hero" id="top">
   <div class="hero-media">
     <img src="images/hero-02.jpg" srcset="images/full/02.jpg 2200w, images/hero-02.jpg 2800w" sizes="100vw" alt="Sunset over the private lake and pool at Destin To Relax" fetchpriority="high">
@@ -219,7 +233,25 @@
 
 <!-- ======== YOUR WEEK HERE ======== -->
 <section class="section section-dark" id="week">
-  <div class="container">
+  <div class="week-scrolly" id="weekScrolly" aria-hidden="true">
+    <div class="week-scene">
+      <div class="ws-sky" id="wsSky"></div>
+      <div class="ws-sun" id="wsSun"></div>
+      <div class="ws-stars" id="wsStars"></div>
+      <div class="ws-water" id="wsWater"></div>
+      <div class="ws-head">
+        <p class="kicker kicker-light">Your Week Here</p>
+        <h2 class="light">A day at Destin To Relax</h2>
+      </div>
+      <div class="ws-card" id="wsCard">
+        <span class="week-time" id="wsTime"></span>
+        <h4 id="wsTitle"></h4>
+        <p id="wsDesc"></p>
+      </div>
+      <div class="ws-dots" id="wsDots"></div>
+    </div>
+  </div>
+  <div class="container week-fallback" id="weekFallback">
     <div class="section-head reveal">
       <p class="kicker kicker-light">Your Week Here</p>
       <h2 class="light">A day at Destin To Relax</h2>
@@ -321,6 +353,9 @@
       <button class="gf" data-f="destin">Destiny East &amp; Beaches</button>
     </div>
     <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="gallery-more">
+      <button class="btn btn-more" id="galleryMore">Show all photos</button>
+    </div>
   </div>
 </section>
 
@@ -361,7 +396,7 @@
         <div class="fun-body">
           <h4>For the Whole Family</h4>
           <ul>
-            <li><a href="https://www.crabislanddestin.com" target="_blank" rel="noopener">Crab Island sandbar</a> - rent a pontoon for the day</li>
+            <li><a href="https://www.destinflorida.com/things-to-do/crab-island" target="_blank" rel="noopener">Crab Island sandbar</a> - rent a pontoon for the day</li>
             <li><a href="https://www.harborwalkvillage.com" target="_blank" rel="noopener">Dolphin cruises</a> from the Destin Harbor Boardwalk</li>
             <li><a href="https://www.gulfarium.com" target="_blank" rel="noopener">Gulfarium Marine Adventure Park</a></li>
             <li><a href="https://www.floridastateparks.org/parks-and-trails/henderson-beach-state-park" target="_blank" rel="noopener">Henderson Beach State Park</a> trails &amp; dunes</li>
@@ -375,7 +410,7 @@
           <h4>For the Kids</h4>
           <ul>
             <li><a href="https://bigkahunas.com" target="_blank" rel="noopener">Big Kahuna's Water &amp; Adventure Park</a></li>
-            <li><a href="https://funatthetrack.com/pages/destin" target="_blank" rel="noopener">The Track</a>: go-karts, bumper boats &amp; arcade</li>
+            <li><a href="https://funatthetrack.com/pages/destin-location" target="_blank" rel="noopener">The Track</a>: go-karts, bumper boats &amp; arcade</li>
             <li><a href="https://wwazone.com" target="_blank" rel="noopener">Wild Willy's Adventure Zone</a></li>
             <li><a href="https://fudpucker.com" target="_blank" rel="noopener">Gator Beach at Fudpucker's</a></li>
             <li>Bowling &amp; mini golf at <a href="https://www.destincommons.com" target="_blank" rel="noopener">Destin Commons</a></li>
@@ -402,7 +437,7 @@
           <ul>
             <li>Miramar Beach - <a href="https://www.premiumoutlets.com/outlet/silver-sands" target="_blank" rel="noopener">Silver Sands outlets</a> &amp; beachfront dining</li>
             <li><a href="https://seasidefl.com" target="_blank" rel="noopener">Seaside</a> - the pastel town with Airstream food trucks</li>
-            <li><a href="https://rosemarybeach.com" target="_blank" rel="noopener">Rosemary Beach</a> - cobblestone streets &amp; carriage rides</li>
+            <li><a href="https://www.visitsouthwalton.com/beaches/rosemary-beach" target="_blank" rel="noopener">Rosemary Beach</a> - cobblestone streets &amp; carriage rides</li>
             <li><a href="https://alysbeach.com" target="_blank" rel="noopener">Alys Beach</a> - white courtyards &amp; stunning architecture</li>
             <li>Bike scenic 30A on the <a href="https://www.visitsouthwalton.com" target="_blank" rel="noopener">Timpoochee Trail</a></li>
             <li>Panama City Beach - pet a capybara at <a href="https://zooworldpcb.com" target="_blank" rel="noopener">ZooWorld</a></li>
@@ -546,7 +581,7 @@
   </figure>
 </div>
 
-<script src="js/gallery-data.js"></script>
-<script src="js/main.js"></script>
+<script src="js/gallery-data.js?v=2"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>
