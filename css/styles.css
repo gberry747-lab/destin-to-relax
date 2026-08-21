@@ -294,7 +294,7 @@ h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .band {
   position: relative; padding: clamp(6rem, 13vw, 10rem) 1.4rem; text-align: center; color: #fff;
   background-size: cover; background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll; /* fixed attachment forces repaints on every scroll frame */
 }
 .band-review { background-image: linear-gradient(rgba(13,36,51,0.36), rgba(13,36,51,0.36)), url('../images/hero-68.jpg'); }
 .band-cta {

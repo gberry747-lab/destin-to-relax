@@ -252,7 +252,7 @@
       setCard(Math.round(p * segs));
     }
 
-    let ticking = false;
+    let ticking = false, lastP = -1;
     function onScroll() {
       if (ticking) return;
       ticking = true;
@@ -260,7 +260,10 @@
         const r = scrolly.getBoundingClientRect();
         const total = r.height - window.innerHeight;
         const p = Math.min(1, Math.max(0, -r.top / (total || 1)));
-        apply(p);
+        if (Math.abs(p - lastP) > 0.0015 || p === 0 || p === 1) {
+          lastP = p;
+          apply(p);
+        }
         ticking = false;
       });
     }
@@ -321,22 +324,29 @@
         l.style.transform = "scale(" + (pre + (1.45 - pre) * t) + ")";
         const op = fadeIn[i] ? ease(clamp01((p - fadeIn[i][0]) / (fadeIn[i][1] - fadeIn[i][0]))) : 1;
         l.style.opacity = op;
+        /* blur is quantized to 0.5px steps: smooth enough to read as focus,
+           coarse enough that the browser re-rasterizes only a few times per fade */
         let blur = 0;
-        if (fadeIn[i]) blur += 2.5 * (1 - op);
-        if (death[i]) blur += 2.5 * ease(clamp01((p - death[i][0]) / (death[i][1] - death[i][0])));
-        l.style.filter = blur > 0.05 ? "blur(" + blur.toFixed(2) + "px)" : "none";
+        if (fadeIn[i]) blur += 2 * (1 - op);
+        if (death[i]) blur += 2 * ease(clamp01((p - death[i][0]) / (death[i][1] - death[i][0])));
+        blur = Math.round(Math.min(2, blur) * 2) / 2;
+        const f = blur > 0 ? "blur(" + blur + "px)" : "none";
+        if (l._f !== f) { l._f = f; l.style.filter = f; }
       });
       setLine(p < 0.38 ? 0 : p < 0.68 ? 1 : 2);
     }
 
-    let ticking = false;
+    let ticking = false, lastP = -1;
     function onScroll() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
         const r = el.getBoundingClientRect();
         const p = clamp01(-r.top / ((r.height - window.innerHeight) || 1));
-        apply(p);
+        if (Math.abs(p - lastP) > 0.0015 || p === 0 || p === 1) {
+          lastP = p;
+          apply(p);
+        }
         ticking = false;
       });
     }
